@@ -1,0 +1,48 @@
+{
+  "name": "@cenetex/plugin-ratibot-research",
+  "version": "0.0.1",
+  "description": "Thin ElizaOS / Milady client for ratibot's published Solana token research — fetches spotlight reports on demand.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src/skills"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "elizaos-plugin",
+    "milady-plugin",
+    "solana",
+    "ratibot",
+    "research",
+    "defi"
+  ],
+  "author": "Cenetex Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "@elizaos/core": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.4.0",
+    "vitest": "^4.1.4"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
