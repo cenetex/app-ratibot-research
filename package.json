@@ -1,6 +1,6 @@
 {
-  "name": "@cenetex/plugin-ratibot-research",
-  "version": "0.0.1",
+  "name": "@cenetex/app-ratibot-research",
+  "version": "0.1.0",
   "description": "Thin ElizaOS / Milady client for ratibot's published Solana token research — fetches spotlight reports on demand.",
   "type": "module",
   "main": "./dist/index.js",
@@ -46,7 +46,7 @@
         "feed",
         "ecosystem"
       ],
-      "runtimePlugin": "@cenetex/plugin-ratibot-research",
+      "runtimePlugin": "@cenetex/app-ratibot-research",
       "viewer": {
         "url": "/api/apps/ratibot-research/viewer",
         "sandbox": "allow-scripts allow-same-origin allow-popups allow-forms"

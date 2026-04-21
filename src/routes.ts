@@ -11,7 +11,7 @@ import { RatibotEcosystem } from "./services/ratibot-ecosystem.js";
 import type { EcosystemPayload, ReportIndexEntry } from "./types.js";
 import { renderViewerHtml, VIEWER_FRAME_ANCESTORS_DIRECTIVE } from "./viewer.js";
 
-const APP_NAME = "@cenetex/plugin-ratibot-research";
+const APP_NAME = "@cenetex/app-ratibot-research";
 const APP_DISPLAY_NAME = "Ratibot Research";
 const APP_ROUTE_PREFIX = "/api/apps/ratibot-research";
 const VIEWER_PATH = `${APP_ROUTE_PREFIX}/viewer`;
