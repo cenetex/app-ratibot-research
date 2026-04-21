@@ -1,5 +1,5 @@
 /**
- * @cenetex/plugin-ratibot-research
+ * @cenetex/app-ratibot-research
  *
  * Eliza app + plugin for ratibot's published research. Surface:
  *   - subscribe to new reports as they are published (RatibotReportFeed)
@@ -34,7 +34,7 @@ export const ratibotResearchPlugin: Plugin = {
     launchType: "embed",
     launchUrl: null,
     capabilities: ["research", "solana", "feed", "ecosystem"],
-    runtimePlugin: "@cenetex/plugin-ratibot-research",
+    runtimePlugin: "@cenetex/app-ratibot-research",
     viewer: {
       url: "/api/apps/ratibot-research/viewer",
       sandbox: "allow-scripts allow-same-origin allow-popups allow-forms",

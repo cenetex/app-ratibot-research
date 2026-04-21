@@ -1,4 +1,4 @@
-# @cenetex/plugin-ratibot-research
+# @cenetex/app-ratibot-research
 
 Thin ElizaOS / Milady client for [ratibot](https://github.com/cenetex/ratibot)'s
 published Solana token research.
@@ -15,7 +15,7 @@ so existing reports aren't replayed; only reports that appear in subsequent
 polls fire events.
 
 ```ts
-import { RatibotReportFeed } from "@cenetex/plugin-ratibot-research";
+import { RatibotReportFeed } from "@cenetex/app-ratibot-research";
 
 const feed = runtime.getService<RatibotReportFeed>(RatibotReportFeed.serviceType);
 feed?.onReport((entry) => {
@@ -36,11 +36,11 @@ fetch the published spotlight PDF for that token.
 ## Install
 
 ```bash
-npm install @cenetex/plugin-ratibot-research
+npm install @cenetex/app-ratibot-research
 ```
 
 ```ts
-import { ratibotResearchPlugin } from "@cenetex/plugin-ratibot-research";
+import { ratibotResearchPlugin } from "@cenetex/app-ratibot-research";
 
 export default {
   plugins: [ratibotResearchPlugin],

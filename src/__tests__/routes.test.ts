@@ -253,7 +253,7 @@ describe("handleAppRoutes — session", () => {
     await handleAppRoutes(ctx);
     expect(r.status).toBe(200);
     const body = JSON.parse(r.body!);
-    expect(body.appName).toBe("@cenetex/plugin-ratibot-research");
+    expect(body.appName).toBe("@cenetex/app-ratibot-research");
     expect(body.mode).toBe("viewer");
     expect(body.status).toBe("running");
     expect(body.telemetry.reportCount).toBe(REPORTS.length);
