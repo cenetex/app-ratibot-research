@@ -63,6 +63,11 @@
     }
   },
   "author": "Cenetex Inc.",
+  "homepage": "https://github.com/cenetex/app-ratibot-research",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cenetex/app-ratibot-research.git"
+  },
   "license": "MIT",
   "dependencies": {
     "@elizaos/core": "^2.0.0-alpha.173"

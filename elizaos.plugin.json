@@ -67,8 +67,8 @@
   ],
   "author": "Cenetex Inc.",
   "license": "MIT",
-  "homepage": "https://github.com/cenetex/plugin-ratibot-research",
-  "repository": "https://github.com/cenetex/plugin-ratibot-research",
+  "homepage": "https://github.com/cenetex/app-ratibot-research",
+  "repository": "https://github.com/cenetex/app-ratibot-research",
   "keywords": ["elizaos-app", "milady-app", "solana", "ratibot", "research", "defi"],
   "app": {
     "displayName": "Ratibot Research",
