@@ -137,7 +137,7 @@ export const getSpotlightAction: Action = {
       const existing = await findSpotlightForMint(mint, apiBase);
       if (existing) {
         const text = `Spotlight available: ${existing.title}\n${apiBase}${existing.url}`;
-        callback?.({ text, action: "GET_SPOTLIGHT", data: existing });
+        callback?.({ text, action: "GET_SPOTLIGHT", data: { ...existing } });
         return { success: true, text, data: { ...existing } };
       }
 
