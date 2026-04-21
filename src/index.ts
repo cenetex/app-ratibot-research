@@ -31,7 +31,7 @@ export const ratibotResearchPlugin: Plugin = {
   app: {
     displayName: "Ratibot Research",
     category: "research",
-    launchType: "embed",
+    launchType: "connect",
     launchUrl: null,
     capabilities: ["research", "solana", "feed", "ecosystem"],
     runtimePlugin: "@cenetex/app-ratibot-research",

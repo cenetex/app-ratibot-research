@@ -14,7 +14,8 @@
   },
   "files": [
     "dist",
-    "src/skills"
+    "src/skills",
+    "elizaos.plugin.json"
   ],
   "scripts": {
     "build": "tsc",
@@ -38,7 +39,7 @@
     "app": {
       "displayName": "Ratibot Research",
       "category": "research",
-      "launchType": "embed",
+      "launchType": "connect",
       "launchUrl": null,
       "capabilities": [
         "research",
@@ -57,7 +58,8 @@
           "commands",
           "telemetry"
         ]
-      }
+      },
+      "bridgeExport": "./dist/routes.js"
     }
   },
   "author": "Cenetex Inc.",

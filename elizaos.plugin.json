@@ -1,0 +1,90 @@
+{
+  "$schema": "https://elizaos.dev/schemas/plugin-manifest.json",
+  "id": "ratibot-research",
+  "name": "Ratibot Research",
+  "description": "Thin client for ratibot's Solana token research — subscribe to new reports, browse ecosystem rankings, and fetch deep dives on demand.",
+  "version": "0.1.0",
+  "kind": "app",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "RATIBOT_API_BASE": {
+        "type": "string",
+        "description": "Base URL for ratibot's published research CDN. Defaults to the CloudFront distribution."
+      },
+      "RATIBOT_POLL_INTERVAL_MS": {
+        "type": "number",
+        "description": "Interval (ms) between report-feed polls."
+      },
+      "RATIBOT_ECOSYSTEM_TTL_MS": {
+        "type": "number",
+        "description": "TTL (ms) for cached ecosystem payload."
+      },
+      "RATIBOT_SUBSCRIPTION_TYPES": {
+        "type": "string",
+        "description": "Comma-separated report types to emit (spotlight,weekly,daily,trade)."
+      }
+    }
+  },
+  "uiHints": {
+    "RATIBOT_API_BASE": {
+      "label": "Ratibot CDN",
+      "help": "Base URL for the ratibot research CDN.",
+      "type": "text",
+      "placeholder": "https://d1bn9lkpdxaeev.cloudfront.net"
+    },
+    "RATIBOT_POLL_INTERVAL_MS": {
+      "label": "Poll interval (ms)",
+      "type": "number",
+      "advanced": true
+    },
+    "RATIBOT_ECOSYSTEM_TTL_MS": {
+      "label": "Ecosystem cache TTL (ms)",
+      "type": "number",
+      "advanced": true
+    },
+    "RATIBOT_SUBSCRIPTION_TYPES": {
+      "label": "Subscribed report types",
+      "type": "text",
+      "advanced": true,
+      "placeholder": "spotlight,weekly,daily,trade"
+    }
+  },
+  "optionalSecrets": [
+    "RATIBOT_API_BASE",
+    "RATIBOT_POLL_INTERVAL_MS",
+    "RATIBOT_ECOSYSTEM_TTL_MS",
+    "RATIBOT_SUBSCRIPTION_TYPES"
+  ],
+  "skills": [
+    {
+      "id": "token-spotlight",
+      "name": "Token Spotlight",
+      "description": "Fetch ratibot's spotlight report for a Solana mint.",
+      "path": "src/skills/token-spotlight.md"
+    }
+  ],
+  "author": "Cenetex Inc.",
+  "license": "MIT",
+  "homepage": "https://github.com/cenetex/plugin-ratibot-research",
+  "repository": "https://github.com/cenetex/plugin-ratibot-research",
+  "keywords": ["elizaos-app", "milady-app", "solana", "ratibot", "research", "defi"],
+  "app": {
+    "displayName": "Ratibot Research",
+    "category": "research",
+    "launchType": "connect",
+    "launchUrl": null,
+    "capabilities": ["research", "solana", "feed", "ecosystem"],
+    "runtimePlugin": "@cenetex/app-ratibot-research",
+    "viewer": {
+      "url": "/api/apps/ratibot-research/viewer",
+      "sandbox": "allow-scripts allow-same-origin allow-popups allow-forms"
+    },
+    "session": {
+      "mode": "viewer",
+      "features": ["commands", "telemetry"]
+    },
+    "bridgeExport": "./dist/routes.js"
+  }
+}
