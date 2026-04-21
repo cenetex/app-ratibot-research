@@ -26,16 +26,44 @@
   },
   "keywords": [
     "elizaos-plugin",
+    "elizaos-app",
     "milady-plugin",
     "solana",
     "ratibot",
     "research",
     "defi"
   ],
+  "elizaos": {
+    "kind": "app",
+    "app": {
+      "displayName": "Ratibot Research",
+      "category": "research",
+      "launchType": "embed",
+      "launchUrl": null,
+      "capabilities": [
+        "research",
+        "solana",
+        "feed",
+        "ecosystem"
+      ],
+      "runtimePlugin": "@cenetex/plugin-ratibot-research",
+      "viewer": {
+        "url": "/api/apps/ratibot-research/viewer",
+        "sandbox": "allow-scripts allow-same-origin allow-popups allow-forms"
+      },
+      "session": {
+        "mode": "viewer",
+        "features": [
+          "commands",
+          "telemetry"
+        ]
+      }
+    }
+  },
   "author": "Cenetex Inc.",
   "license": "MIT",
   "dependencies": {
-    "@elizaos/core": "^1.0.0"
+    "@elizaos/core": "^2.0.0-alpha.173"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
